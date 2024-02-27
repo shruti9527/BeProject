@@ -1,4 +1,5 @@
 package com.example.myproject;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -25,7 +26,7 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
 
-public class scanner extends AppCompatActivity {
+public class newscan extends AppCompatActivity {
     private Button button_capture;
     private TextView textView_display;
     private static final int REQUEST_CAMERA = 100;
@@ -37,7 +38,7 @@ public class scanner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scanner);
+        setContentView(R.layout.activity_newscan);
 
         button_capture = findViewById(R.id.button_capture);
         textView_display = findViewById(R.id.textView_display);
@@ -45,8 +46,8 @@ public class scanner extends AppCompatActivity {
         button_capture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(scanner.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(scanner.this, new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA);
+                if (ContextCompat.checkSelfPermission(newscan.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(newscan.this, new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA);
                 } else {
                     dispatchTakePictureIntent();
                 }
@@ -81,7 +82,7 @@ public class scanner extends AppCompatActivity {
     private void getTextfromImage(Bitmap bitmap) {
         TextRecognizer recognizer = new TextRecognizer.Builder(this).build();
         if (!recognizer.isOperational()) {
-            Toast.makeText(scanner.this, "Error Occurred", Toast.LENGTH_SHORT).show();
+            Toast.makeText(newscan.this, "Error Occurred", Toast.LENGTH_SHORT).show();
             return;
         }
 

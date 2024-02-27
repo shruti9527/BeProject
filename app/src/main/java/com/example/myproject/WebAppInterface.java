@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.webkit.JavascriptInterface;
 
 public class WebAppInterface {
-    private Context mContext;
+    private final Context mContext;
 
     // Instantiate the interface and set the context
     WebAppInterface(Context context) {

@@ -8,6 +8,8 @@ import android.webkit.WebSettings;
 
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import android.util.Log;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,27 +37,31 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
         // Inject JavaScript interface
-        webView.addJavascriptInterface(new WebAppInterface(), "Android");
-        webView.addJavascriptInterface(new WebAppInterface_two(), "Android");
+        webView.addJavascriptInterface(new WebAppInterface_one(), "Android_one");
+        webView.addJavascriptInterface(new WebAppInterface_two(), "Android_two");
+
         // Load the HTML file from the assets folder
         webView.loadUrl("file:///android_asset/index.html");
     }
 
     // Define the Java method that can be called from JavaScript
-    public class WebAppInterface {
+    public class WebAppInterface_one {
         @android.webkit.JavascriptInterface
-        public void startNewActivity() {
+        public void startScannerActivity() {
+            Log.d("WebAppInterface_one", "startScannerActivity() called");
             // Start another activity
-            Intent intent = new Intent(MainActivity.this, scanner.class);
+            Intent intent = new Intent(MainActivity.this, newscan.class);
             startActivity(intent);
         }
     }
+
     public class WebAppInterface_two{
         @android.webkit.JavascriptInterface
         public void startSpellerActivity() {
+            Log.d("WebAppInterface_two", "startSpellerActivity() called");
             // Start another activity
             Intent intent = new Intent(MainActivity.this, speller.class);
             startActivity(intent);
-
+        }
     }
-}}
+}
