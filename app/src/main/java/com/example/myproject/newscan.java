@@ -33,8 +33,6 @@ public class newscan extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 101;
     private Bitmap bitmap;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

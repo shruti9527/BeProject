@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <script type="text/javascript">
@@ -10,6 +12,18 @@
         function startSpellerActivity() {
 
             window.Android_two.startSpellerActivity();
+        }
+        function startSettingActivity() {
+
+            window.Android_three.startSettingActivity();
+        }
+        function starthelpActivity() {
+
+            window.Android_four.starthelpActivity();
+        }
+         function startmapsActivity() {
+
+            window.Android_five.startmapsActivity();
         }
     </script>
 
@@ -30,6 +44,7 @@
     <div style="width: 25px; height: 25px; left: 326px; top: 101px; position: absolute">
         <img src = "mic.svg"> </div>
     <div style="left: 178px; top: 95px; position: absolute; text-align: center; color: #E8DDFF; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Search</div>
+
     <div style="left: 74px; top: 92px; position: absolute; text-align: center; color: #583E83; font-size: 20px; font-family: Yesteryear; font-weight: 400; word-wrap: break-word">Third</div>
     <div style="left: 80px; top: 114px; position: absolute; text-align: center; color: #583E83; font-size: 20px; font-family: Yesteryear; font-weight: 400; word-wrap: break-word">Eye</div>
     <div style="left: 38px; top: 365px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Bus Scan </div>
@@ -44,7 +59,7 @@
     <div style="left: 287px; top: 701px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Finder</div>
     <div style="left: 54px; top: 514px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">ATM</div>
     <div style="left: 42px; top: 813px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Home</div>
-    <div style="left: 162px; top: 813px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Favorite</div>
+    <div style="left: 162px; top: 813px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Helpline</div>
     <div style="left: 291px; top: 813px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Settings</div>
     <div style="left: 176px; top: 516px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Food</div>
     <div style="left: 283px; top: 516px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Javanese Text; font-weight: 400; word-wrap: break-word">Medical</div>
@@ -65,7 +80,9 @@
         <div style="width: 100px; height: 99.40px; left: 0px; top: 0px; position: absolute; background: #583E83; border-radius: 9999px"></div>
     </div>
     <div style="width: 50px; height: 50px; left: 172px; top: 291px; position: absolute; ">
-        <img src = "commute.svg">
+        <a href="#" onclick="startmapsActivity()">
+            <img src="commute.svg" alt="maps Button"></a>
+
     </div>
     <div style="width: 100px; height: 99.40px; left: 266px; top: 266px; position: absolute; background: #583E83; border-radius: 9999px"></div>
     <div style="width: 45px; height: 45px; left: 293px; top: 294px; position: absolute">
@@ -109,10 +126,16 @@
         <img src = "home.svg">
     </div>
     <div style="width: 28px; height: 28px; left: 311px; top: 789px; position: absolute">
-        <img src = "settings.svg">
+
+        <a href="#" onclick="startSettingActivity()">
+            <img src="settings.svg" alt="Settings Button"></a>
+
     </div>
     <div style="width: 28px; height: 28px; left: 183px; top: 788px; position: absolute">
-        <a href = "fav.html"><img src = "favorite.svg"></a>
+        <a href="#" onclick="starthelpActivity()">
+            <img src="favorite.svg" alt="Settings Button"></a>
+
+
     </div>
     <div style="width: 100px; height: 99.40px; left: 27px; top: 417px; position: absolute">
         <div style="width: 100px; height: 99.40px; left: 0px; top: 0px; position: absolute; background: #583E83; border-radius: 9999px"></div>

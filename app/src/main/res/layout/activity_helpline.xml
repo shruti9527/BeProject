@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Helpline">
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" HELPLINE NUMBERS"
+        android:textSize="40sp"/>
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/about"/>
+
+    <TextView
+        android:id="@+id/pmpml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" PMPML : 020 245 45454"
+        android:textSize="25sp"
+        android:layout_below="@id/horizontal_line"/>/>
+
+    <TextView
+        android:id="@+id/control_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Emergency : 100"
+        android:textSize="25sp"
+        android:layout_below="@id/pmpml"/>/>
+
+    <TextView
+        android:id="@+id/police_station"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Police Station : 020 244 52623"
+        android:textSize="25sp"
+        android:layout_below="@id/control_room"/>/>
+
+    <TextView
+        android:id="@+id/hospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Hospital : 020 240 23000 "
+        android:textSize="25sp"
+        android:layout_below="@id/police_station"/>/>
+
+    <TextView
+        android:id="@+id/ambulance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Ambulance : 701 "
+        android:textSize="25sp"
+        android:layout_below="@id/hospital"/>/>
+
+
+</RelativeLayout>

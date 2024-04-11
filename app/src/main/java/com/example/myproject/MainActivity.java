@@ -23,29 +23,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        WebView webView = findViewById(R.id.webview);
-//        webView.getSettings().setJavaScriptEnabled(true); // Enable JavaScript
-//        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
-//
-////        WebView webView = (WebView) findViewById(R.id.webview);
-//        webView.loadUrl("file:///android_asset/index.html");
-////        webView.getSettings().setJavaScriptEnabled(true);
-
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        // Inject JavaScript interface
         webView.addJavascriptInterface(new WebAppInterface_one(), "Android_one");
         webView.addJavascriptInterface(new WebAppInterface_two(), "Android_two");
-
-        // Load the HTML file from the assets folder
+        webView.addJavascriptInterface(new WebAppInterface_three(), "Android_three");
+        webView.addJavascriptInterface(new WebAppInterface_four(), "Android_four");
+        webView.addJavascriptInterface(new WebAppInterface_five(), "Android_five");
         webView.loadUrl("file:///android_asset/index.html");
     }
 
-    // Define the Java method that can be called from JavaScript
-    public class WebAppInterface_one {
+       public class WebAppInterface_one {
         @android.webkit.JavascriptInterface
         public void startScannerActivity() {
             Log.d("WebAppInterface_one", "startScannerActivity() called");
@@ -59,9 +50,35 @@ public class MainActivity extends AppCompatActivity {
         @android.webkit.JavascriptInterface
         public void startSpellerActivity() {
             Log.d("WebAppInterface_two", "startSpellerActivity() called");
-            // Start another activity
+
             Intent intent = new Intent(MainActivity.this, speller.class);
             startActivity(intent);
         }
     }
+
+    public class WebAppInterface_three{
+        @android.webkit.JavascriptInterface
+        public void startSettingActivity() {
+            Log.d("WebAppInterface_three", "startSettingActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, settings.class);
+            startActivity(intent);
+}}
+    public class WebAppInterface_four{
+        @android.webkit.JavascriptInterface
+        public void starthelpActivity() {
+            Log.d("WebAppInterface_four", "starthelpActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, Helpline.class);
+            startActivity(intent);
+        }}
+
+    public class WebAppInterface_five{
+        @android.webkit.JavascriptInterface
+        public void startmapsActivity() {
+            Log.d("WebAppInterface_five", "startmapsActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, Navigation.class);
+            startActivity(intent);
+        }}
 }

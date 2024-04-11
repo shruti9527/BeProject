@@ -13,9 +13,20 @@
         android:layout_height="120dp"
         android:text="Capture"
         android:textSize="40sp"
+
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/busnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bus Number is"
+        android:textSize="50sp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
         android:gravity="center" />
 
     <TextView
@@ -24,7 +35,7 @@
         android:layout_height="wrap_content"
         android:text="Your text!"
         android:textSize="50sp"
-        android:layout_below="@id/button_capture"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
         android:gravity="center" />
 

@@ -1,9 +1,13 @@
+@media only screen and (max-width: 600px) {
+
+
 * {
   box-sizing: border-box;
 }
 body {
   font-size: 14px;
   background: rgba(245,241,255,1);
+
 }
 .irow{
 transform: translate(27px, 23px);
@@ -576,4 +580,5 @@ transform: translate(10px, 80px);
 }
 .name {
   color: #fff;
+}
 }

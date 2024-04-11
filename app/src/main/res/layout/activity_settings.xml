@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".settings">
+
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ABOUT"
+        android:textSize="50sp"/>
+
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/about"/>
+
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Version : 1.0.0"
+        android:textSize="25sp"
+        android:layout_below="@id/horizontal_line"/>
+
+    <View
+        android:id="@+id/horizontal_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/version"/>
+
+
+    <TextView
+        android:id="@+id/make"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Made by : Shruti Deshpande ;\n
+        Vaibhavi Gawade ;\n
+         Harsh Ghodgaonkar ;\n
+          Atharva Hande
+"
+        android:textSize="25sp"
+        android:layout_below="@id/horizontal_line1"/>
+
+    <View
+        android:id="@+id/horizontal_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/make"/>
+
+    <TextView
+        android:id="@+id/support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Support : abc123@gmail.com"
+        android:textSize="25sp"
+        android:layout_below="@id/horizontal_line2"/>
+
+    <View
+        android:id="@+id/horizontal_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/support"/>
+
+    <TextView
+        android:id="@+id/connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Connect us at"
+        android:textSize="25sp"
+        android:layout_below="@id/horizontal_line3"/>
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iglogo"
+        android:layout_below="@id/connect"
+        android:onClick="openInstagram"
+        android:layout_margin="50px"/>
+
+
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fblogo"
+        android:layout_below="@id/connect"
+        android:onClick="openInstagram"
+        android:layout_margin="50px"
+
+        android:layout_toRightOf="@+id/instagram"/>
+
+    <View
+        android:id="@+id/horizontal_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/facebook"/>
+
+
+
+</RelativeLayout>

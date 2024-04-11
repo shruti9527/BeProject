@@ -258,7 +258,7 @@ public class speller extends AppCompatActivity {
                         String letter = String.valueOf(spelledWord.charAt(i));
                         textToSpeech.speak(letter, TextToSpeech.QUEUE_ADD, null, null);
                         try {
-                            Thread.sleep(800); // Adjust delay as needed
+                            Thread.sleep(1000); // Adjust delay as needed
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
