@@ -21,6 +21,21 @@
         android:theme="@style/Theme.MyProject"
         tools:targetApi="31">
         <activity
+            android:name=".education"
+            android:exported="false" />
+        <activity
+            android:name=".PublicBuilding"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital"
+            android:exported="false" />
+        <activity
+            android:name=".food"
+            android:exported="false" />
+        <activity
+            android:name=".atm"
+            android:exported="false" />
+        <activity
             android:name=".Helpline"
             android:exported="false" />
         <activity
@@ -45,8 +60,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_map_key"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_key" />
     </application>
 
 </manifest>

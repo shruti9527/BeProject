@@ -3,11 +3,9 @@ package com.example.myproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
-import android.os.Bundle;
 import android.webkit.WebSettings;
 
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 import android.util.Log;
 
 
@@ -33,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         webView.addJavascriptInterface(new WebAppInterface_three(), "Android_three");
         webView.addJavascriptInterface(new WebAppInterface_four(), "Android_four");
         webView.addJavascriptInterface(new WebAppInterface_five(), "Android_five");
+        webView.addJavascriptInterface(new WebAppInterface_atm(), "Android_atm");
+        webView.addJavascriptInterface(new WebAppInterface_food(), "Android_food");
+        webView.addJavascriptInterface(new WebAppInterface_hospital(), "Android_hospital");
+        webView.addJavascriptInterface(new WebAppInterface_PublicBuilding(), "Android_PublicBuilding");
+        webView.addJavascriptInterface(new WebAppInterface_education(), "Android_education");
         webView.loadUrl("file:///android_asset/index.html");
     }
 
@@ -79,6 +82,50 @@ public class MainActivity extends AppCompatActivity {
             Log.d("WebAppInterface_five", "startmapsActivity() called");
 
             Intent intent = new Intent(MainActivity.this, Navigation.class);
+            startActivity(intent);
+        }}
+    public class WebAppInterface_atm{
+        @android.webkit.JavascriptInterface
+        public void startatmActivity() {
+            Log.d("WebAppInterface_atm", "startatmActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, atm.class);
+            startActivity(intent);
+        }}
+
+    public class WebAppInterface_food{
+        @android.webkit.JavascriptInterface
+        public void startfoodActivity() {
+            Log.d("WebAppInterface_food", "startfoodActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, food.class);
+            startActivity(intent);
+        }}
+
+    public class WebAppInterface_hospital{
+        @android.webkit.JavascriptInterface
+        public void starthospitalActivity() {
+            Log.d("WebAppInterface_hospital", "starthospitalActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, hospital.class);
+            startActivity(intent);
+        }}
+
+    public class WebAppInterface_PublicBuilding{
+        @android.webkit.JavascriptInterface
+        public void startPublicBuildingActivity() {
+            Log.d("WebAppInterface_PublicBuilding", "startPublicBuildingActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, PublicBuilding.class);
+            startActivity(intent);
+        }}
+
+    public class WebAppInterface_education{
+        @android.webkit.JavascriptInterface
+        public void starteducationActivity() {
+            Log.d("WebAppInterface_education", "starteducationActivity() called");
+
+            Intent intent = new Intent(MainActivity.this, education.class);
             startActivity(intent);
         }}
 }

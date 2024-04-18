@@ -3,10 +3,12 @@
 
 * {
   box-sizing: border-box;
+  width:100%}
 }
 body {
   font-size: 14px;
   background: rgba(245,241,255,1);
+
 
 }
 .irow{
@@ -581,4 +583,6 @@ transform: translate(10px, 80px);
 .name {
   color: #fff;
 }
+
+
 }
